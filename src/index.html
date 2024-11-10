@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DDD Visualization Tool</title>
+  <script type="module">
+    import '@haxtheweb/simple-icon/simple-icon.js';
+    import '@haxtheweb/simple-icon/lib/simple-icons.js';
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    #app {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+    }
+
+    data-fetcher-component {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    site-visualizer .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    site-visualizer .card {
+      width: calc(50% - 8px);
+      max-width: 220px;
+      padding: 16px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    site-visualizer .card:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      site-visualizer .card {
+        width: calc(25% - 12px);
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    simple-icon {
+      --simple-icon-height: 24px;
+      --simple-icon-width: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>DDD Visualization Tool</h1>
+    <data-fetcher-component></data-fetcher-component>
+  </div>
+
+  <script type="module" src="./DataFetcherComponent.js"></script>
+  <script type="module" src="./SiteVisualizer.js"></script>
+</body>
+</html>
