@@ -10,7 +10,7 @@ class SiteVisualizer extends LitElement {
       display: block;
     }
     .overview {
-      border: 1px solid #ddd;
+      border: 1px solid #000000;
       border-radius: 8px;
       padding: 24px;
       margin-bottom: 24px;
@@ -63,7 +63,7 @@ class SiteVisualizer extends LitElement {
       }
     }
     .card {
-      border: 1px solid #ddd;
+      border: 1px solid #000000;
       border-radius: 8px;
       padding: 16px;
       display: flex;
@@ -86,20 +86,20 @@ class SiteVisualizer extends LitElement {
       margin-top: auto;
     }
     .card-links a {
-      color: #0066cc;
+      color: #000000;
       text-decoration: none;
       padding: 4px 8px;
-      border: 1px solid #0066cc;
+      border: 1px solid #000000;
       border-radius: 4px;
       font-size: 14px;
     }
     .card-links a:hover {
-      background: #0066cc;
+      background: #797c7d;
       color: white;
     }
     .card-metadata {
       font-size: 14px;
-      color: #666;
+      color: #000000;
     }
   `;
 

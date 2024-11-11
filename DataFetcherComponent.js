@@ -26,16 +26,16 @@ class DataFetcherComponent extends LitElement {
     input {
       flex: 1;
       padding: 8px 12px;
-      border: 1px solid #ccc;
+      border: 1px solid #a3a3a7;
       border-radius: 4px;
       font-size: 16px;
     }
     input:invalid {
-      border-color: #ff4444;
+      border-color: #ff0202;
     }
     button {
       padding: 8px 16px;
-      border: 1px solid #ccc;
+      border: 1px solid #080808;
       border-radius: 4px;
       background: white;
       cursor: pointer;
@@ -46,7 +46,7 @@ class DataFetcherComponent extends LitElement {
       cursor: not-allowed;
     }
     .error {
-      color: #ff4444;
+      color: #ff0000;
       margin-top: 8px;
     }
   `;
