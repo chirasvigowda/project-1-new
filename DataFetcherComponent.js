@@ -4,7 +4,8 @@ class DataFetcherComponent extends LitElement {
   static properties = {
     siteData: { type: Object },
     error: { type: String },
-    loading: { type: Boolean }
+    loading: { type: Boolean },
+    jsonURL: { type: String, attribute: 'json-url' }
   };
 
   constructor() {
@@ -12,6 +13,7 @@ class DataFetcherComponent extends LitElement {
     this.siteData = null;
     this.error = '';
     this.loading = false;
+    this.jsonURL = '';
   }
 
   static styles = css`

@@ -113,7 +113,7 @@ class SiteVisualizer extends LitElement {
   }
 
   getSourceUrl(location) {
-    return location.replace(/\/[^/]*$/, '/index.html');
+    return this.jsonURL;
   }
 
   render() {
@@ -165,9 +165,9 @@ class SiteVisualizer extends LitElement {
       <div class="cards">
         ${items.map(item => html`
           <div class="card">
-            ${item.metadata?.image ? html`
+            ${item.metadata.images[0] ? html`
               <img 
-                src="${item.metadata.image}" 
+                src="https://haxtheweb.org/${item.metadata.images[0]}" 
                 alt="${item.title}" 
                 class="card-image"
               />
@@ -178,8 +178,8 @@ class SiteVisualizer extends LitElement {
               Last updated: ${this.formatDate(item.metadata?.updated)}
             </div>
             <div class="card-links">
-              <a href="${item.location}" target="_blank">View Page</a>
-              <a href="${this.getSourceUrl(item.location)}" target="_blank">View Source</a>
+              <a href="https://haxtheweb.org/${item.location}" target="_blank">View Page</a>
+              <a href="https://haxtheweb.org/${item.location}" target="_blank">View Source</a>
             </div>
           </div>
         `)}
