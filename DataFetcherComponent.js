@@ -94,7 +94,7 @@ class DataFetcherComponent extends LitElement {
       this.error = '';
       this.siteData = data;
     } catch (err) {
-      this.error = 'Could not retrieve valid site.json';
+      this.error = 'Valid site.json could not be retrieved';
       this.siteData = null;
     } finally {
       this.loading = false;
